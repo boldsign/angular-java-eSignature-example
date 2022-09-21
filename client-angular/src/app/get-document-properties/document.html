@@ -1,0 +1,19 @@
+<div id="angular-demo" class="content" role="main">
+    <div *ngIf="showLoading" class="loader">
+        <img src="../assets/loader.svg" />
+    </div>
+    <h1>Get detailed information of the document</h1>
+    <div style="width: 50%; float: left">
+        <form id="document-sent" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="label-details">
+                <label for="documentId"> Enter Document Id here </label>
+                <input id="documentId" type="text" formControlName="documentId" placeholder="Enter your document id" />
+            </div>
+            <button class="button" type="submit">Get Document Properties</button>
+        </form>
+    </div>
+
+    <div *ngIf="documentProperties" id="jsonContent">
+        <ngx-json-viewer [json]="documentProperties" [expanded]="false"></ngx-json-viewer>
+    </div>
+</div>

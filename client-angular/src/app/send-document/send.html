@@ -1,0 +1,42 @@
+<div id="angular-demo" class="content" role="main">
+    <div *ngIf="showLoading" class="loader">
+        <img src="../assets/loader.svg" />
+    </div>
+    <h1>Send document for signing</h1>
+    <div>
+        <p class="description">
+            Fill in the below form to create an e-signature document with those
+            prefilled values and send an e-signature request.
+        </p>
+        <form id="document-sent" enctype="multipart/form-data" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="label-details">
+                <label for="file">File</label>
+                <input formControlName="file" id="file" type="file" (change)="onFileSelct($event)" />
+            </div>
+
+            <div class="label-details">
+                <label for="name"> Signer Name </label>
+                <input id="name" type="text" formControlName="name" placeholder="Enter the signer name" />
+            </div>
+
+            <div class="label-details">
+                <label for="email"> Signer Email </label>
+                <input id="email" type="email" formControlName="email" placeholder="Enter the signer email" />
+            </div>
+
+            <button class="button" type="submit">Send Document for Signing</button>
+        </form>
+    </div>
+
+    <div *ngIf="isDocumentSend" style="margin-top: 60px; max-width: 900px; line-height: 28px">
+        <p>
+            You have successfully sent out your document for signature. You will be
+            notified as the other recipients view or sign the document.
+        </p>
+        <p>
+            You have logged in to BoldSign application to search this document ID
+            <b>{{documentId}}</b> in "My Documents" listing page to track the status
+            of this document.
+        </p>
+    </div>
+</div>

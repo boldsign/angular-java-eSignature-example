@@ -1,0 +1,140 @@
+<div id="angular-demo" class="ts-sample-container">
+    <div class="ts-header">
+        <h1>Welcome to BoldSign API Demos</h1>
+    </div>
+
+    <div class="ts-card-container">
+        <div class="ts-card" onclick="location.href='/send-document'">
+            <div class="ts-card-header">
+                <h2>Send document for signing</h2>
+            </div>
+            <div class="ts-card-body">
+                Send e-signature document request to one or more recipients with signing
+                workflow, auto-reminders, expiry date, and more.
+            </div>
+            <a routerLink="/send-document">View Demo</a>
+        </div>
+
+        <div class="ts-card" onclick="location.href='/get-document-properties'">
+            <div class="ts-card-header">
+                <h2>Get detailed information of the document</h2>
+            </div>
+            <div class="ts-card-body">
+                Get and track the document status and its full properties with the
+                dedicated endpoints.
+            </div>
+            <a routerLink="/get-document-properties">View Demo</a>
+        </div>
+
+        <div class="ts-card" onclick="location.href='/send-document-using-template'">
+            <div class="ts-card-header">
+                <h2>Send document from template</h2>
+            </div>
+            <div class="ts-card-body">
+                Use a pre-configured template created in
+                <a style="text-align: left !important; display: contents" href="https://app.boldsign.com">BoldSign Web
+                    App</a>
+                in your API call to send e-signature requests.
+            </div>
+            <a routerLink="/send-document-using-template">View Demo</a>
+        </div>
+
+        <div class="ts-card" onclick="location.href='/embed-send-document'">
+            <div class="ts-card-header">
+                <h2>Embed send document within your app</h2>
+            </div>
+            <div class="ts-card-body">
+                Send e-signature request within your app by embedded BoldSign sending
+                page in it.
+            </div>
+            <a routerLink="/embed-send-document">View Demo</a>
+        </div>
+
+        <div class="ts-card" onclick="location.href='/embed-send-document-using-template'">
+            <div class="ts-card-header">
+                <h2>Embed send document using template within your app</h2>
+            </div>
+            <div class="ts-card-body">
+                Send e-signature request using template within your app by embedded
+                BoldSign sending page in it.
+            </div>
+            <a routerLink="/embed-send-document-using-template">View Demo</a>
+        </div>
+
+        <div class="ts-card" onclick="location.href='/embed-signing'">
+            <div class="ts-card-header">
+                <h2>Embed signing process within your app</h2>
+            </div>
+            <div class="ts-card-body">
+                Seamlessly collect e-signatures within your app by embedding BoldSign
+                signer page in it.
+            </div>
+            <a routerLink="/embed-signing">View Demo</a>
+        </div>
+    </div>
+</div>
+<style>
+    .ts-header {
+        margin-bottom: 50px;
+    }
+
+    .ts-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ts-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        min-width: calc(33.3% - 40px);
+        margin-right: 40px;
+        margin-bottom: 40px;
+        border-color: #c4c4c4;
+        transition: 0.3s;
+        cursor: pointer;
+        padding: 24px 20px;
+        box-sizing: border-box;
+        max-width: 350px;
+    }
+
+    .ts-card:hover {
+        box-shadow: 0 8px 16px 0 rgb(0 0 0 / 10%);
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .ts-card-header {
+        min-height: 65px;
+    }
+
+    .ts-card h2 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 0px;
+        letter-spacing: 0.2px;
+    }
+
+    .ts-card a {
+        text-align: center !important;
+        display: block;
+        color: #0565ff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .ts-card .ts-card-body {
+        min-height: 120px;
+        line-height: 23px;
+        font-size: 14px;
+    }
+
+</style>

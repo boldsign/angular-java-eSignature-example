@@ -1,0 +1,20 @@
+<div id="angular-demo" style="text-align: center">
+    <h1>Thanks for choosing BoldSign API!</h1>
+    <div *ngIf="status==='SIGNED'" style="max-width: 900px; line-height: 28px; margin: auto">
+        <p>
+            You have successfully signed the document <b>{{documentId}}</b>. A copy of
+            the final document will be received in your mail box.
+        </p>
+    </div>
+    <div *ngIf="status==='SEND'" style="max-width: 900px; line-height: 28px; margin: auto">
+        <p>
+            You have successfully sent out your document for signature. You will be
+            notified as the other recipients view or sign the document.
+        </p>
+        <p style="line-height: 28px">
+            You can login to BoldSign application to search this document ID
+            <b>{{documentId || ''}}</b> in "My Documents" listing page to track the status
+            of this document.
+        </p>
+    </div>
+</div>
