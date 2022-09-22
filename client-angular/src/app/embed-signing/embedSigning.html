@@ -1,0 +1,41 @@
+<div id="angular-demo" class="content" role="main">
+    <div *ngIf="showLoading" class="loader">
+        <img src="../assets/loader.svg" />
+    </div>
+    <h1>Embed signing process within your app</h1>
+    <p class="description">
+        BoldSign embedded signing feature allow your users to complete the signing
+        process without leaving your application using iFrame. <br /><br />
+        Try filling the below form details, send the document, and sign the
+        document. This will help you to understand the complete signing process.
+    </p>
+    <div *ngIf="!showiframe">
+        <span>Fill the details to send for signing!</span>
+        <form id="document-sent" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="label-details">
+                <label for="templateId"> Template ID </label>
+                <input id="templateId" type="text" formControlName="templateId" placeholder="Enter the template id" />
+                <div style="text-align: right; font-size: 12px; padding-top: 4px">
+                    ID of a template created in
+                    <a class="text-decoration-none" href="https://app.boldsign.com">BoldSign Web App</a>
+                </div>
+            </div>
+
+            <div class="label-details">
+                <label for="name"> Signer Name </label>
+                <input id="name" type="text" formControlName="name" placeholder="Enter the signer name" />
+            </div>
+
+            <div class="label-details">
+                <label for="email"> Signer Email </label>
+                <input id="email" type="email" formControlName="email" placeholder="Enter the signer email" />
+            </div>
+
+            <button class="button" type="submit">Send Document for Signing</button>
+        </form>
+    </div>
+
+    <div *ngIf="showiframe">
+        <iframe [src]="src" height="1000"></iframe>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div id="angular-demo" class="content" role="main">
+    <div *ngIf="showLoading" class="loader">
+        <img src="../assets/loader.svg" />
+    </div>
+    <h1>Embed send document within your app</h1>
+    <p class="description">
+        BoldSign embedded requesting feature allows you to send the document for
+        signing process without leaving your application using iFrame. <br /><br />
+        Try filling out the details below and sending the document. This will help
+        you to understand the complete sending and signing process.
+    </p>
+    <div *ngIf="!showiframe">
+        <span>Fill the details to send for signing!</span>
+        <form id="document-sent" enctype="multipart/form-data" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <div class="label-details">
+                <label for="file">File</label>
+                <input formControlName="file" id="file" type="file" (change)="onFileSelct($event)" />
+            </div>
+
+            <div class="label-details">
+                <label for="name"> Signer Name </label>
+                <input id="name" type="text" formControlName="name" placeholder="Enter the signer name" />
+            </div>
+
+            <div class="label-details">
+                <label for="email"> Signer Email </label>
+                <input id="email" type="email" formControlName="email" placeholder="Enter the signer email" />
+            </div>
+            <button class="button" type="submit">Send Document for Signing</button>
+        </form>
+    </div>
+
+    <div *ngIf="showiframe">
+        <iframe [src]="src" height="1000"></iframe>
+    </div>
+</div>

@@ -1,0 +1,141 @@
+<svg width="100%" height="100%" class="circular" viewBox="25 25 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 100%;">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+   <style>
+   .ui-col.dark .loader .path {
+            stroke: #fff;
+        }
+
+        .ui-col.dark .loader .path-outline {
+            stroke: rgba(255, 255, 255, 0.2);
+        }
+
+        .ui-col.color .loader .path {
+            stroke: #fff;
+        }
+
+        .ui-col.color .loader .path-outline {
+            stroke: rgba(0, 0, 0, 0.2);
+        }
+
+        .loader {
+            position: relative;
+            margin: 0 auto;
+            width: 100px;
+        }
+
+        .loader:before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+
+        .circular {
+            animation: rotate 1.33s linear infinite;
+            height: 100%;
+            transform-origin: center center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .path {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            animation: dash 1.5s ease-in-out infinite;
+            stroke-linecap: round;
+            stroke: #0565FF;
+        }
+
+        .path-outline {
+            stroke: #EEEEEE;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 200;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -21px;
+            }
+            100% {
+                stroke-dasharray: 89, 200;
+                stroke-dashoffset: -124px;
+            }
+        }
+
+        @keyframes growandshrink {
+            0% {
+                left: 0%;
+                right: 100%;
+                animation-timing-function: ease-in;
+            }
+            33% {
+                left: 10%;
+                right: 25%;
+            }
+            66% {
+                left: 75%;
+                right: 10%;
+            }
+            100% {
+                left: 100%;
+                right: 0%;
+                animation-timing-function: ease-out;
+            }
+        }
+
+        .loader.linear.indefinite {
+            width: 100%;
+            height: 2px;
+            background: rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .loader.linear.indefinite .inside {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #0097E6;
+            animation: growandshrink 1s linear infinite;
+        }
+
+        .dark .loader.linear.indefinite {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .loader.linear.indefinite .inside {
+            background: white;
+        }
+
+        .color .loader.linear.indefinite {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .color .loader.linear.indefinite .inside {
+            background: white;
+        }
+
+        .alignment {
+            display: inline-block;
+        }
+
+        .align-first {
+            margin-left: 50px;
+        }   
+   </style>
+     <circle class="path-outline" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"></circle>
+</svg>

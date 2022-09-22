@@ -1,0 +1,162 @@
+.main-container {
+    width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+    font-family: sans-serif;
+    max-width: calc(100% - 20px);
+}
+
+header {
+    background-color: hsla(0, 0%, 100%, .8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+header #menuitems {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    padding: 8px 10px;
+}
+
+.navbar-menuitems {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+    margin-right: 0px;
+}
+
+.navbar-nav .nav-link {
+    color: #495057;
+    padding: 8px;
+    text-decoration: none;
+    margin-right: 12px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fe4901;
+}
+
+.free-trial-btn {
+    background-color: #fe4901;
+    border: none;
+    color: #fff;
+    height: 42px;
+    border-radius: 4px;
+    padding: 0 20px;
+    font-size: 16px;
+    margin-left: 16px;
+    line-height: 42px;
+    text-decoration: none;
+}
+
+.free-trial-btn:hover {
+    background: #fe5b1a
+}
+
+#angular-demo {
+    padding: 35px 0px;
+    margin-top: 55px;
+}
+
+#angular-demo .loader {
+    background-color: #fff;
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+}
+
+#angular-demo .loader img {
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+}
+
+#angular-demo .description {
+    line-height: 23px;
+    color: #666E80;
+    margin: 16px 0 32px;
+    max-width: 900px;
+}
+
+#document-sent {
+    margin-top: 15px;
+    max-width: 500px;
+}
+
+#document-sent .label-details {
+    padding: 10px 0;
+}
+
+#document-sent .label-details label {
+    padding-right: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#document-sent .label-details input {
+    outline: none;
+    height: 20px;
+    padding: 6px 12px;
+    width: calc(100% - 30px);
+    margin-top: 8px;
+    border: 1px solid #D5DADE;
+}
+
+#document-sent button {
+    background: #0565FF;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 12px;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#document-sent button:hover {
+    background-color: #006CE6;
+}
+
+#angular-demo iframe {
+    width: 100%;
+    border: none;
+}
+
+#jsonContent {
+    width: 48%;
+    float: right;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    height: 500px;
+    margin-bottom: 50px;
+    position: relative;
+    display: grid;
+    overflow: scroll;
+}
+
+a.text-decoration-none {
+    text-decoration: none;
+    color: #0565FF;
+}
