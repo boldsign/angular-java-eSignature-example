@@ -1,5 +1,5 @@
 # eSignature examples with Angular and Java – BoldSign API
-This repository contains a variety of code examples for working with [BoldSign eSignature API](https://boldsign.com/esignature-api/?utm_source=apiexamples&utm_medium=github), and this code examples are built with Angular and Java.
+This repository contains a variety of code examples for working with [BoldSign eSignature API](https://boldsign.com/esignature-api/?utm_source=github&utm_medium=backlinks), and this code examples are built with Angular and Java.
 
 [![API Demo][api demo badge]][api demo link]
 
